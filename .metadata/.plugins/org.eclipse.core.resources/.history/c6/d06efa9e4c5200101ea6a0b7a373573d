@@ -1,5 +1,0 @@
-package egovframework.example.fileDb.web;
-
-public class FileDbController {
-
-}

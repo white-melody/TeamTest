@@ -1,5 +1,0 @@
-package egovframework.example.emp.service.impl;
-
-public interface EmpMapper {
-
-}

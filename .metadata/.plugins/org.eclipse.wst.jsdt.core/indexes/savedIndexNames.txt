@@ -1,8 +1,0 @@
-INDEX VERSION 1.4+C:\Work\07_Mapper\.metadata\.plugins\org.eclipse.wst.jsdt.core\indexes
-1326798734.index
-2201445854.index
-3015921358.index
-463560161.index
-3951860639.index
-281561759.index
-3439707055.index
