@@ -22,3 +22,12 @@
 # virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
 replay_pid*
+
+#내가 추가한것들 : 것은 안올라감
+MapperExam/src/test/
+MapperExam/.project
+MapperExam/.classpath
+MapperExam/target/
+MapperExam/.settings/
+.metadata/
+Servers/
