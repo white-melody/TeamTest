@@ -1,0 +1,5 @@
+package egovframework.example.fileDb.service.impl;
+
+public interface FileDbMapper {
+
+}

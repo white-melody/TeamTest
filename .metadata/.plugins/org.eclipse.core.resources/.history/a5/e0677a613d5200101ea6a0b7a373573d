@@ -1,0 +1,5 @@
+package egovframework.example.gallery.service.impl;
+
+public class GalleryMapper {
+
+}

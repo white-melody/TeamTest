@@ -1,0 +1,5 @@
+package egovframework.example.emp.web;
+
+public class EmpController {
+
+}

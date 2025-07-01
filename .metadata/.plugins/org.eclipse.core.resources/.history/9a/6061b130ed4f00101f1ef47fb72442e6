@@ -1,0 +1,5 @@
+<select id="selectDeptList" parameterType="Criteria" resultType="DeptVO">
+  <bind name="searchKeyword" value="'%' + keyword + '%'" />
+  SELECT * FROM TB_DEPT
+  WHERE DNAME LIKE #{searchKeyword}
+</select>

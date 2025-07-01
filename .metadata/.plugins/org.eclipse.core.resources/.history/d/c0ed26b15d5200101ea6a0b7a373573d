@@ -1,0 +1,14 @@
+package egovframework.example.gallery.service.impl;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+
+class GalleryServiceImplTest2 {
+
+	@Test
+	void testSelectGalleryListTotCnt() {
+		fail("Not yet implemented");
+	}
+
+}

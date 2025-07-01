@@ -1,0 +1,32 @@
+/**
+ * 
+ */
+package egovframework.example.auth.web;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import egovframework.example.auth.service.MemberService;
+
+/**
+ * @author user
+ *
+ */
+@Controller
+public class MemberController {
+   @Autowired
+   private MemberService memberService;
+   
+//   로그인 화면 열기
+   @GetMapping("/login.do")
+   public String loginView() {
+      return "auth/login";
+   }
+}
+
+
+
+
+
+

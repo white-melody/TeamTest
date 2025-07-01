@@ -1,0 +1,5 @@
+//com.springsource.config.ui.prefs.activePageIndex\:/MapperExam/src/main/resources/egovframework/spring/context-datasource.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/MapperExam/src/main/resources/egovframework/spring/context-mapper.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/MapperExam/src/main/resources/egovframework/spring/context-transaction.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage index\="0"/>
+//com.springsource.config.ui.prefs.activePageIndex\:/MapperExam/src/main/webapp/WEB-INF/config/egovframework/springmvc/dispatcher-servlet.xml=<?xml version\="1.0" encoding\="UTF-8"?>\r\n<activePage id\="com.springsource.sts.config.ui.editors.beans" index\="3" kind\="formPage" uri\="http\://www.springframework.org/schema/beans"/>
+eclipse.preferences.version=1

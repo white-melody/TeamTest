@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="egovframework.example.emp.service.impl.EmpMapper">
+   <select id="selectEmpList"
+         parameterType="Criteria"
+         resultType="EmpVO"
+   >
+      SELECT * FROM TB_EMP
+      WHERE ENAME LIKE '%' || #{searchKeyword} ||'%'
+      OFFSET #{firstIndex} ROWS
+      FETCH NEXT #{pageUnit} ROWS ONLY
+   </select>
+
+</mapper>

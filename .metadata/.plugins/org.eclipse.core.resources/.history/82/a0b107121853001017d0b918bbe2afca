@@ -1,0 +1,75 @@
+/**
+ * 
+ */
+package egovframework.example.fileDb.service.impl;
+
+import java.util.List;
+import java.util.UUID;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
+
+import egovframework.example.common.Criteria;
+import egovframework.example.fileDb.service.FileDbService;
+import egovframework.example.fileDb.service.FileDbVO;
+
+/**
+ * @author user
+ *
+ */
+@Service
+public class FileDbServiceImpl implements FileDbService {
+   @Autowired
+   FileDbMapper fileDbMapper;
+
+//   전체 조회
+   @Override
+   public List<?> selectFileDbList(Criteria criteria) {
+      // TODO Auto-generated method stub
+      return fileDbMapper.selectFileDbList(criteria);
+   }
+
+@Override
+public int selectFileDbListTotCnt(Criteria criteria) {
+	// TODO Auto-generated method stub
+	return fileDbMapper.selectFileDbListTotCnt(criteria);
+}
+
+@Override
+public int insert(FileDbVO fileDbVO) {
+	// TODO 1)UUID 만들기(기본키)
+	String newUuid = UUID.randomUUID().toString();
+//	        2)다운로드URL 만들기
+	String downloadURL=gernerateDownloadUrl(newUuid);
+//	        3)FILEDbVO에 UUID,URL 저장
+	fileDbVO.setUuid(newUuid);
+	fileDbVO.setFileUrl(downloadURL);
+//	        4)DB insert
+	return fileDbMapper.insert(fileDbVO);
+}
+
+// 다운로드 URL을 만들어주는 메소드
+public String generateDownloadUrl(String uuid) {
+//	인터넷 주소 체계 : htts://localhost:8080/경로(path)?쿼리스트링
+//	htts://localhost:8080 : 기본주소
+//	url만드는 클래스 : ServletUriComponentsBuilder      
+    return ServletUriComponentsBuilder      
+      .fromCurrentContextPath()       //기본주소
+      .path("/fileDb/download.do")    //경로
+      .query("uuid="+uuid)            //쿼리스트림
+      .toUriString();                 //병합
+}
+
+@Override
+public FileDbVO selectFileDb(String uuid) {
+	// TODO Auto-generated method stub
+	return fileDbMapper.selectFileDb(uuid);
+}
+   
+   
+}
+
+
+
+
